@@ -1,0 +1,10 @@
+[
+	{"id":"author","text":"作者","ctrlType":0,"dataType":0,"selected":true},
+	{"id":"startDate","text":"立项时间","ctrlType":1,"dataType":0},
+	{"id":"endDate","text":"结题时间","ctrlType":1,"dataType":0},
+	{"id":"projectType","text":"项目类型","ctrlType":2,"dataType":0,"valueField": "name","textField": "name","url":"jsondata/ScientificResearch_projectType.json"},
+	{"id":"approver","text":"项目性质","ctrlType":2,"dataType":0,"valueField": "name","textField": "name","url":"jsondata/ScientificResearch0.json"},
+	{"id":"score","text":"分值","ctrlType":0,"dataType":1},
+	{"id":"funds","text":"经费","ctrlType":0,"dataType":1},
+	{"id":"status","text":"状态","ctrlType":2,"dataType":0,"url":"jsondata/status.json","valueField":"id","textField":"text"}
+]

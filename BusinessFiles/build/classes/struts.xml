@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 开发阶段 -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.convention.classes.reload" value="false" /> 
+	<constant name="struts.configuration.xml.reload" value="false" />
+	 <constant name="struts.serve.static.browserCache" value="false" />
+	 
+	<!--上传文件大小  20M 20971520 100M  104857600 -->
+	 <constant name="struts.multipart.maxSize" value="104857600" /> 
+	<constant name="struts.action.extension" value="action,do,,"/>
+	<constant name="struts.json.dateformat" value="yyyy-MM-dd"/>
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	 <constant name="struts.ui.theme" value="simple" />
+	 <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+	<!-- hibernate-default和json-default都继承自struts-default包 -->  
+	<package name="BusinessFiles"  namespace="/" extends="json-default,hibernate-default">
+	 	
+		 <!-- <action name="teacher" class="com.hy.action.TeacherAction" >
+			<result name="loginSuccess">/BasicInformation.jsp</result>
+			<result name="loginFail">/login.jsp</result>
+		</action>  -->
+		
+		  <!-- <interceptors>
+	        <interceptor-stack name="myDefaultStack">
+	            <interceptor-ref name="defaultStackNoValidation">
+	                <param name="modelDriven.refreshModelBeforeResult">true</param>
+	            </interceptor-ref>
+	           
+	        </interceptor-stack>
+	    </interceptors>
+    <default-interceptor-ref name="myDefaultStack"/> -->
+    
+    
+    <!-- <interceptors>
+        <interceptor-stack name="myDefaultStack">
+            <interceptor-ref name="defaultStack">
+                <param name="modelDriven.refreshModelBeforeResult">true</param>
+            </interceptor-ref>
+        </interceptor-stack>
+    </interceptors>
+         
+    <default-interceptor-ref name="myDefaultStack"/> -->
+    
+     
+     <!--defaultStackHibernate里面的拦截器会识别出@SessionTarget，@TransactionTarget等标注, 然后将hibernate注入进去
+	        	 <default-interceptor-ref name="defaultStackHibernate"/>-->
+       
+       
+       
+       
+       <interceptors>
+			<!-- <interceptor name="loginInterceptor" class="com.hy.interceptor.LoginInterceptor" >
+				<param name="ignoreActions">
+					login
+				</param>
+			</interceptor> -->
+	        	<interceptor-stack name="myDefaultStack">
+	        		
+	        		<interceptor-ref name="defaultStackHibernate" />
+	        		<!--<interceptor-ref name="loginInterceptor" /> -->
+		             <interceptor-ref name="defaultStackNoValidation">
+		                <param name="modelDriven.refreshModelBeforeResult">true</param>
+		            </interceptor-ref>
+		            <interceptor-ref name="hibernateSessionInterceptor"/>
+					<interceptor-ref name="hibernateValidatorInterceptor"/> 
+	       	 </interceptor-stack>
+        </interceptors>
+        
+          <default-interceptor-ref name="myDefaultStack"/> 
+       
+    <!--顺序为先局部后全局 <global-results>
+          <result name="userlogin" type="redirectAction">
+        <param name="actionName">goHostPages</param>
+		<param name="namespace">/</param>
+		</result>  
+        <result name="userlogout" type="redirectAction" >
+        	 <param name="actionName">logout</param>
+			<param name="namespace">/</param>
+        	</result> 
+    </global-results> -->
+       
+       
+       
+       
+	</package>
+</struts>

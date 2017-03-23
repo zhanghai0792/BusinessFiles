@@ -1,0 +1,13 @@
+1.左连接
+//select * from `t_practiceteaching` as p left join tb_manager as t on p.teacherId = t.id and p.teacherId='mj'; 左连接,错(左连接一定有左边表的全部行)
+2.内连接
+//// select a.*,b.name ,b.professTitle,b.positiontype  from t_practiceteaching a inner join tb_manager b on a.teacherId= b.id and a.teacherId='mj';
+3.自然连接
+//"select p,t.name,t.professTitle,t.positiontype FROM PracticeTeaching as p,Teacher as t where p.teacherId=t.id and p.teacherId='"+l.getTeacherId()+"'";
+4.多表查询
+/*String hql="select t1.title,t1.content from Blog as t1,Usertable as t2 where t1.userId=t2.id and t2.username='a'"    
+				List<Object> resultList = session.createQuery(hql).list();    
+				for (int i = 0; i < resultList.size(); i++) {    
+				    Object[] obj = (Object[])resultList.get(i);    
+				    System.out.println(obj[0]+","+obj[1]);    
+				} */

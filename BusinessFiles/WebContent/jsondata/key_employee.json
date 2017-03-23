@@ -1,0 +1,15 @@
+[
+	{"id":"id","text":"工号","ctrlType":0,"dataType":0,"selected":true},
+	{"id":"name","text":"姓名","ctrlType":0,"dataType":0},
+	{"id":"sex","text":"性别","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_sex.json","valueField": "id","textField":"name"},
+	{"id":"political","text":"政治面貌","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_political.json","valueField": "name","textField":"name"},
+	{"id":"dept","text":"所属科室","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_dept.json","valueField":"name","textField":"name"},
+	{"id":"finalDegree","text":"学位","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_finalDegree.json","valueField":"name","textField":"name"},
+	{"id":"finalEducat","text":"学历","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_finalEducat.json","valueField":"name","textField":"name"},
+	{"id":"professTitle","text":"评定职称","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_title.json","valueField":"name","textField":"name"},
+	{"id":"employTitle","text":"聘任职称","ctrlType":2,"dataType":0,"url":"jsondata/Teacher_title.json","valueField":"name","textField":"name"},
+	{"id":"finalDegreeDate","text":"获得学位时间","ctrlType":1,"dataType":0},
+	{"id":"finalEducatDate","text":"获得学历时间","ctrlType":1,"dataType":0},
+	{"id":"professDate","text":"评定职称时间","ctrlType":1,"dataType":0},
+	{"id":"employDate","text":"聘任职称时间","ctrlType":1,"dataType":0}
+]

@@ -1,0 +1,7 @@
+[
+	{"id":"author","text":"作者","ctrlType":0,"dataType":0,"selected":true},
+	{"id":"publishDate","text":"发表时间","ctrlType":1,"dataType":0},
+	{"id":"level","text":"刊物等级","ctrlType":2,"dataType":0,"url":"jsondata/PaperResearch_level.json","valueField": "name","textField":"name"},
+	{"id":"score","text":"分值","ctrlType":0,"dataType":1},
+	{"id":"status","text":"状态","ctrlType":2,"dataType":0,"url":"jsondata/status.json","valueField":"id","textField":"text"}
+]

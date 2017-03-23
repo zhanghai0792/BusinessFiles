@@ -1,0 +1,4 @@
+﻿<a style="width:100%;text-align:left;font-family: 微软雅黑" data-options="plain:true,iconCls:'icon-add'" class="easyui-linkbutton" href="Jsps/TeachingSecretary/TheoryTeaching.jsp">理论教学</a>
+<a style="width:100%;text-align:left;font-family: 微软雅黑" data-options="plain:true,iconCls:'icon-add'" class="easyui-linkbutton" href="Jsps/TeachingSecretary/PracticeTeaching.jsp" >实践教学</a>
+<a style="width:100%;text-align:left;font-family: 微软雅黑" data-options="plain:true,iconCls:'icon-add'" class="easyui-linkbutton" href="Jsps/TeachingSecretary/PaperTeaching.jsp">论文指导</a>
+<a style="width:100%;text-align:left;font-family: 微软雅黑" data-options="plain:true,iconCls:'icon-add'" class="easyui-linkbutton" href="Jsps/TeachingSecretary/TeachingMaterial.jsp" >教材管理</a>
